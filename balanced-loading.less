@@ -2,6 +2,7 @@ body {
   background-color: #f9f9f9;
 }
 #balanced-loading {
+  display: block;
   position: relative;
   width: 26px;
   height: 26px;
@@ -67,3 +68,56 @@ body {
   }
 }
 
+#facebook-typing {
+  position: relative;
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  background-color: #ccc;
+  left: 100px;
+  -webkit-animation: xylophoneOne 0.5s ease alternate infinite;
+  &:before, &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    border-radius: inherit;
+    background-color: inherit;
+  }
+  &:before {
+    left: 10px;
+    -webkit-animation: xylophoneTwo 0.5s alternate infinite;
+    -webkit-animation-delay: 0.1s;
+  }
+  &:after {
+    left: 20px;
+    -webkit-animation: xylophoneThree 0.5s alternate infinite;
+    -webkit-animation-delay: 0.1s;
+  }
+}
+
+@-webkit-keyframes xylophoneOne {
+  0% {
+    top: 195px;
+  }
+  100%{
+    top: 205px;
+  }
+}
+@-webkit-keyframes xylophoneTwo {
+  0% {
+    top: -5px;
+  }
+  100%{
+    top: 0;
+  }
+}
+@-webkit-keyframes xylophoneThree {
+  0% {
+    top: -10px;
+  }
+  100%{
+    top: 0;
+  }
+}
